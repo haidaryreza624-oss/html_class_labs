@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+        .row{
+            display: flex;
+            justify-content: center;
+        }
+        #submit{
+            padding-left: 0px;
+            width: 150px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Sign In</h2>
+    <form action="" method="post">
+        <table class="container_table">
+            <tr class="row">
+                <td><input type="email" name="user_email" placeholder="Email"></td>
+                
+            </tr>
+            <tr class="row">
+                <td><input type="password" name="user_pass" id="" placeholder="Password"></td>
+            </tr>
+            <tr class="row" style="margin-top: 20px;">
+                <td>do'nt have and account? <a href="signup.html">SignUp</a></td>
+            </tr>
+            <tr class="row">
+                <td><input id="submit" type="submit" value="Login"></td>
+            </tr>
+            
+        </table>
+        
+        
+        
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.container{
+    width: 300px;
+    height: 250px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    
+    
+}
+#title{
+    padding-bottom: 10px;
+}
+.heading{
+    
+    width: 100%;
+    border-bottom: 2px solid black;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    
+        
+}
+.heading .item{
+    border-right: 2px solid black;
+    padding-right: 5px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    
+}
+.heading >:first-child{
+    border-left: 2px solid black;
+}
+.container >:first-child >:first-child {
+    border-left: none;
+}
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Form</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        input{
+            width: 300px;
+            height: 30px;
+            padding-left: 10px;
+            margin-top: 10px;
+        }
+        table{
+            margin-top: 10px;
+        }
+        td{
+            text-align: center;
+        }
+       
+        #submit{
+            padding-left: 0;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Profile Form</h2>
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+        <legend>Personal Information</legend>
+        <table>
+            <tr>
+                <td><input type="text" name="full_name" placeholder="Full Name"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="father_name" placeholder="Father Name"></td>
+            </tr>
+            <tr>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td><input type="tel" name="phone" placeholder="Phone Number"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Education Information</legend>
+        <table>
+            <tr>
+                <th>Degree</th>
+                
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="degree1" placeholder="Degree"></td>
+                
+                <td><input type="text" name="year1" placeholder="Year"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="degree2" placeholder="Degree"></td>
+                
+                <td><input type="text" name="year2" placeholder="Year"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="degree3" placeholder="Degree"></td>
+                
+                <td><input type="text" name="year3" placeholder="Year"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Address Information</legend>
+        <table>
+            <tr>
+                <th>Permanent Address</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="perm_country" placeholder="Country"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="perm_city" placeholder="City"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="perm_address" placeholder="Full Address"></td>
+            </tr>
+
+            <tr>
+                <th>Temporary Address</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="temp_country" placeholder="Country"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="temp_city" placeholder="City"></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="temp_address" placeholder="Full Address"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Upload Section</legend>
+        <table>
+            <tr>
+                <td><input type="file" name="cv"></td>
+            </tr>
+            <tr>
+                <td><input type="file" name="profile_pic"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <br>
+    <input id="submit" type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
