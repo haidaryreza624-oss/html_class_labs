@@ -33,7 +33,7 @@ The lab includes:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/html-class-lab.git
+   git clone https://github.com/haidaryreza624-oss/html_class_labs.git
    ```
 2. Open the folder
 
