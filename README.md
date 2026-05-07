@@ -21,6 +21,8 @@ The lab includes:
 * Lists (ordered and unordered)
 * Tables
 * Forms and input elements
+* Basic html css interaction(intetnal, external)
+  
 
 ## Technologies Used
 
@@ -45,11 +47,6 @@ The lab includes:
 * Creating user-friendly forms
 * Organizing files in a project
 
-## Future Improvements
-
-* Add CSS for styling
-* Make pages responsive
-* Include JavaScript for interactivity
 
 
 
