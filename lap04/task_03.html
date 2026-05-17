@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* display: flex; */
+        }
+        div{
+            
+            border: 1px solid black;
+            height: 400px;
+            margin: 10px;
+            text-align: center;
+            color: white;
+            
+        }
+        
+        div.simple_back{
+            background-color: blue;
+        }
+        div.linear_grad{
+            background-image: linear-gradient(45deg,red,yellow,black);
+            color: black;
+        }
+        div.img_back{
+            background-image: url('Screenshot\ 2026-05-15\ 224819.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="simple_back">
+    <h1>Simple BackGround</h1>
+   </div> 
+   <div class="linear_grad">
+<h1>Gradient BackGround</h1>
+   </div>
+   <div class="img_back">
+<h1>Image BackGround</h1>
+   </div>
+</body>
+</html>

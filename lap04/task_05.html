@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Simple Page</title>
+    <style>
+        ul{
+            display: flex;
+            list-style-type: none;
+            border: none;
+            gap: 10px;
+            margin-right: 30px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+        }
+        a:hover{
+            color: blue;
+        }
+        h1{
+            font-size: 25px;
+        }
+        div{
+            border: 1px solid black;
+        }
+        div.header{
+            text-align: center;
+            display: flex;
+        }
+        div.main_container{
+            display: flex;
+
+        }
+        
+        div.left_content{
+            width: 50%;
+            height: 200px;
+            padding: 20px;
+            border: none;
+            border-right: 1px solid black;
+            background-image: linear-gradient(yellow,red);
+        }
+        div.right_content{
+            width: 50%;
+            height: 200px;
+            padding: 20px;
+            border: none;
+            background-image:url('Screenshot\ 2026-05-15\ 224819.png');
+            color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .slider{
+            
+            display: flex;
+            
+            
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            
+        }
+        .nav_bar{
+            display: flex;
+            justify-content: flex-end;
+            
+        }
+        
+        .footer{
+            text-align: center;
+        }
+
+        .dot_container{
+            display: flex;
+            border: none;
+            height: 100%;
+            align-items: flex-end;
+            
+            display: flex;
+            gap: 20px
+            ;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        
+        <div class="nav_bar">
+            <ul >
+                <a href=""><li>
+                    Home
+                </li></a>
+                <a href=""><li>
+                    About
+                </li></a>
+                <a href=""><li>
+                    Conatact
+                </li>
+                </a>
+            </ul>
+        </div>
+
+
+
+
+
+        <div class="slider" style="overflow: scroll;">
+            
+            
+            <img src="Screenshot 2026-05-15 224819.png"  style="height: 100%;" alt="">
+            <img src="Screenshot 2026-05-15 224819.png"  style="height: 100%;" alt="">
+            <img src="Screenshot 2026-05-15 224819.png"  style="height: 100%;" alt="">
+            <img src="Screenshot 2026-05-15 224819.png"  style="height: 100%;" alt="">
+            <img src="Screenshot 2026-05-15 224819.png"  style="height: 100%;" alt="">
+        </div>
+        <div class="main_container">
+            
+            <div class="left_content">
+                <h1>Left Content</h1>
+                
+            </div>
+            <div class="right_content">
+                <h1>Right Content</h1>
+                
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+</html>
