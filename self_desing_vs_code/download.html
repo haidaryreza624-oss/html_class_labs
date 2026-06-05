@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', sans-serif;
+            background-color: #14120B;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 25px;
+            height: 25px;
+            background-image: url('img/assets/logo-icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 200;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .btn-download {
+            border: 1px solid #ffffff;
+            padding: 3px 9px;
+            border-radius: 40px;
+            background: #ffffff;
+
+            color: #14120B;
+            font-weight: 400;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-download:hover {
+            opacity: 50%;
+        }
+
+        footer {
+            
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+            color: #aaaaaa;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+    .download-section {
+        padding: 80px 0;
+    }
+
+
+    .version-list {
+        list-style: none;
+        /* max-width: 600px; */
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .version-item {
+        background: #1e1b14;
+        border: 1px solid #2a271f;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+
+    .version-item:hover {
+        border-color: #3d3a30;
+    }
+
+    .version-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #ffffff;
+        cursor: default;
+        user-select: none;
+    }
+
+    .arrow {
+        font-size: 0.8rem;
+        color: #aaaaaa;
+        transition: transform 0.2s;
+    }
+
+    .version-item.open .arrow {
+        transform: rotate(180deg);
+    }
+
+        .version-dropdown {
+            max-height: 0;
+            padding: 0 24px;
+            background: #12100b;
+            border-top: 0 solid #2a271f;
+            
+            transition: max-height 0.3s ease, padding 0.3s ease, border-width 0.2s;
+        }
+
+        .version-item.open .version-dropdown {
+            max-height: 800px;   
+            padding: 24px 24px;
+            border-top-width: 1px;
+        }
+    .os-downloads {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        padding: 80px 0;
+        justify-content: center;
+    }
+
+    .os-card {
+        flex: 1;
+        min-width: 260px;
+        background: #1e1b14;
+        border: 1px solid #2a271f;
+        border-radius: 24px;
+        padding: 24px;
+        transition: all 0.2s;
+    }
+
+    .os-card:hover {
+        border-color: #3d3a30;
+        /* transform: translateY(-4px); */
+    }
+
+    .os-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding-bottom: 20px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #2a271f;
+    }
+
+    .os-logo {
+        width: 40px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .os-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .os-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .os-list li {
+        margin-bottom: 14px;
+    }
+
+    .os-list li a {
+        color: #cccccc;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: color 0.2s;
+        display: block;
+        padding: 4px 0;
+    }
+
+    .os-list li a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <div class="logo-icon"></div>
+                <span class="logo-text">VS Code</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="download.html">Download</a>
+                <a href="#">Features</a>
+                <a href="#">Docs</a>
+                <a href="#">Extensions</a>
+            </nav>
+            <a href="download.html" class="btn-download">Get VSCode</a>
+        </header>
+
+        
+
+
+        <div class="hero" style="margin-top: 70px;">
+            <h2>Download Visual Sutudio Code </h2>
+            <p style="opacity: 70%; margin-top: 10px;"">Free and built on open source. AI agents, Git, debugging, and extensions included.</p>
+        </div>
+
+
+        <div class="download-section">
+    
+                <ul class="version-list">
+                    <li class="version-item open">
+                        <div class="version-header">
+                            <span>1.124 <span style="margin-left: 10px; font-size: 12px; font-weight: 20; border: 1px solid white; border-radius: 19px; padding: 6px;">Stable Build</span></span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="version-dropdown">
+                            <div class="os-downloads">
+                                <div class="os-card">
+                                    <div class="os-header">
+                                        <div class="os-logo" style="background-image: url('img/assets/windows-logo.png');"></div>
+                                        <div class="os-title">Windows</div>
+                                    </div>
+                                    <ul class="os-list">
+                                        <li><a href="download.html">Windows 11 / 10 (x64)</a></li>
+                                        <li><a href="download.html">Windows 10 (x86 / 32-bit)</a></li>
+                                        <li><a href="download.html">Windows 11 ARM64</a></li>
+                                        <li><a href="download.html">Windows 8.1 (legacy)</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="os-card">
+                                    <div class="os-header">
+                                        <div class="os-logo" style="background-image: url('img/assets/mac_logo.png');"></div>
+                                        <div class="os-title">macOS</div>
+                                    </div>
+                                    <ul class="os-list">
+                                        <li><a href="download.html">Apple Silicon (ARM64)</a></li>
+                                        <li><a href="download.html">Intel (x64)</a></li>
+                                        <li><a href="download.html">Universal Binary</a></li>
+                                        <li><a href="download.html">macOS 10.11+ (legacy)</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="os-card">
+                                    <div class="os-header">
+                                        <div class="os-logo" style="background-image: url('img/assets/linux_logo.png');"></div>
+                                        <div class="os-title">Linux</div>
+                                    </div>
+                                    <ul class="os-list">
+                                        <li><a href="download.html">.deb (Debian/Ubuntu) x64</a></li>
+                                        <li><a href="download.html">.rpm (Fedora/RHEL) x64</a></li>
+                                        <li><a href="download.html">Snap (64-bit)</a></li>
+                                        <li><a href="download.html">AppImage (x64)</a></li>
+                                        <li><a href="download.html">ARM64 (.deb)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="version-item ">
+                        <div class="version-header">
+                            <span>1.123</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="version-dropdown">
+                        </div>
+                    </li>
+                    <li class="version-item ">
+                        <div class="version-header">
+                            <span>1.122</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="version-dropdown">
+                        </div>
+                    </li>
+                    <li class="version-item ">
+                        <div class="version-header">
+                            <span>1.121</span>
+                            <span class="arrow">▼</span>
+                        </div>
+                        <div class="version-dropdown">
+                        </div>
+                    </li>
+                </ul>
+        </div>
+
+
+
+
+
+        <footer>
+            <div>VS Code – designed for developers, built for speed</div>
+            <div class="footer-links">
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">Discord</a>
+                <a href="#">Privacy</a>
+                <a href="#">Download</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

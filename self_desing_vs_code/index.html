@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Code Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Inter', 'Segoe UI', sans-serif;
+            background-color: #14120B;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 25px;
+            height: 25px;
+            background-image: url('img/assets/logo-icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 200;
+            transition: opacity 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .btn-download {
+            border: 1px solid #ffffff;
+            padding: 3px 9px;
+            border-radius: 40px;
+            background: #ffffff;
+
+            color: #14120B;
+            font-weight: 400;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-download:hover {
+            opacity: 50%;
+        }
+
+        footer {
+            
+            padding: 40px 0;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+            color: #aaaaaa;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        .extensions-section {
+        padding: 80px 0;
+    }
+
+    .extensions-title {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 56px auto;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #e0e0e0;
+        line-height: 1.5;
+    }
+
+    .extensions-grid {
+        display: flex;
+        gap: 24px;
+    }
+
+    .extension-card {
+        width: 200px;
+        background: #1e1b14;
+        border: 1px solid #2a271f;
+        border-radius: 16px;
+        padding: 20px 12px;
+        text-align: center;
+        transition: all 0.2s ease;
+    }
+
+    .extension-card:hover {
+        border-color: #ffffff;
+        
+    }
+
+    .extension-logo {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 12px auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .extension-name {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #ffffff;
+    }
+     .language-section {
+        
+        padding: 80px 0;
+    }
+
+    .language-title {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 56px auto;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #e0e0e0;
+        line-height: 1.5;
+    }
+
+    .language-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 38px;
+        
+    }
+
+    .language-card {
+        
+        background: rgba(30, 27, 20, 0.6);
+        backdrop-filter: blur(2px);
+        border: 1px solid #2a271f;
+        border-radius: 20px;
+        width: 200px;
+        padding: 24px 12px;
+        text-align: center;
+        transition: all 0.25s ease;
+        cursor: default;
+    }
+
+    .language-card:hover {
+        border-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 18px rgba(255, 255, 255, 0.1);
+        background: rgba(30, 27, 20, 0.9);
+    }
+
+    .language-image {
+        width: 70px;
+        height: 70px;
+        margin: 0 auto 16px auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        background-color: #1e1b14;
+        transition: transform 0.2s;
+    }
+
+    .language-card:hover .language-image {
+        transform: scale(1.05);
+    }
+
+    .language-name {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #cccccc;
+        transition: color 0.2s;
+    }
+
+    .language-card:hover .language-name {
+        color: #ffffff;
+    }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <div class="logo-icon"></div>
+                <span class="logo-text">VS Code</span>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="download.html">Download</a>
+                <a href="#">Features</a>
+                <a href="#">Docs</a>
+                <a href="#">Extensions</a>
+            </nav>
+            <a href="download.html" class="btn-download">Get VSCode</a>
+        </header>
+
+        
+
+
+        <div class="hero" style="margin-top: 70px;">
+            <h2>Built to make you extraordinarily productive,<br> VSCode is the best coding tool.</h2>
+            <div class="download_box" style="display: flex; margin-top: 20px; gap: 10px;">
+                <a href="download.html" class="btn-download" style="height: 30px; font-weight: 500; ">
+                Get For Windows
+                </a>
+                <a href="download.html" class="btn-download" style="height: 30px; font-weight: 200; background-color: transparent; color: white;">
+                    Learn More
+                </a>
+            </div>
+            <img src="img/assets/hero.png" class="hero-img" style="width: 100%; margin-top: 60px; border-radius: 5px;" alt="">
+        </div>
+
+
+
+
+        <div class="extensions-section">
+    <div class="extensions-title">
+        Extend, customize, and build – with extensions and MCP tools for every need.
+    </div>
+    <div class="extensions-grid">
+        <div class="extension-card">
+            <div class="extension-logo" style="background-image: url('img/assets/extension-gitlens.png');"></div>
+            <div class="extension-name">Git Lens</div>
+        </div>
+        <div class="extension-card">
+            <div class="extension-logo" style="background-image: url('img/assets/extension-azure.png');"></div>
+            <div class="extension-name">Azure</div>
+        </div>
+        <div class="extension-card">
+            <div class="extension-logo" style="background-image: url('img/assets/extension-c.png');"></div>
+            <div class="extension-name">C Coding Tools</div>
+        </div>
+        <div class="extension-card">
+            <div class="extension-logo" style="background-image: url('img/assets/extension-cs-dev-kit.png');"></div>
+            <div class="extension-name">C# Dev Tools</div>
+        </div>
+        <div class="extension-card">
+            <div class="extension-logo" style="background-image: url('img/assets/extension-jupyter.png');"></div>
+            <div class="extension-name">Jupyter</div>
+        </div>
+        <div class="extension-card">
+            <div class="extension-logo" style="background-image: url('img/assets/extension-mongodb.png');"></div>
+            <div class="extension-name">MongoDB</div>
+        </div>
+        <div class="extension-card">
+            <div class="extension-logo" style="background-image: url('img/assets/extension-python.png');"></div>
+            <div class="extension-name">Python Dev Tools</div>
+        </div>
+       
+    </div>
+        </div>
+
+
+        <div class="language-section">
+    <div class="language-title">
+        Every major language. Built‑in or from the Marketplace.
+    </div>
+    <div class="language-grid">
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-python.png');"></div>
+            <div class="language-name">Python</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-js.png');"></div>
+            <div class="language-name">JavaScript</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-ts.png');"></div>
+            <div class="language-name">TypeScript</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-java.png');"></div>
+            <div class="language-name">Java</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-cpp.png');"></div>
+            <div class="language-name">C++</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-cs.png');"></div>
+            <div class="language-name">C#</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-php.png');"></div>
+            <div class="language-name">PHP</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-html.png');"></div>
+            <div class="language-name">HTML</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-json.png');"></div>
+            <div class="language-name">JSON</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-markdown.png');"></div>
+            <div class="language-name">Markdow</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-powershell.png');"></div>
+            <div class="language-name">Bash</div>
+        </div>
+        <div class="language-card">
+            <div class="language-image" style="background-image: url('img/assets/language-yaml.png');"></div>
+            <div class="language-name">YAML</div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+        <footer>
+            <div>VS Code – designed for developers, built for speed</div>
+            <div class="footer-links">
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">Discord</a>
+                <a href="#">Privacy</a>
+                <a href="#">Download</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
