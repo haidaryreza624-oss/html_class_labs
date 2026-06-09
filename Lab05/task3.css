@@ -1,0 +1,11 @@
+.box{
+width:100px;
+height:100px;
+background:red;
+animation:move 4s infinite;
+}
+@keyframes move{
+0%{transform:translateX(0) rotate(0);background:red;}
+50%{transform:translateX(400px) rotate(180deg);background:blue;}
+100%{transform:translateX(0) rotate(360deg);background:green;}
+}
