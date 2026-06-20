@@ -1,26 +1,30 @@
-ul{
-list-style:none;
-display:flex;
-gap:20px;
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
-a{
-text-decoration:none;
-position:relative;
-transition:0.3s;
+
+a {
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
 }
-a:hover{
-color:red;
+
+a:hover {
+    color: red;
 }
-a::after{
-content:"";
-position:absolute;
-left:0;
-bottom:-3px;
-width:0;
-height:2px;
-background:red;
-transition:0.3s;
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: 0.3s;
 }
-a:hover::after{
-width:100%;
+
+a:hover::after {
+    width: 100%;
 }

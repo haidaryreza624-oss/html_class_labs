@@ -1,10 +1,40 @@
-input[type="text"]{border:2px solid blue;}
-a[href*="google"]{color:red;}
-img[src^="image"]{border:3px solid green;}
-a[href$=".com"]{background:yellow;}
-li:first-child{color:red;}
-li:last-child{color:blue;}
-tr:nth-child(2){background:lightgray;}
-p:not(.special){color:green;}
-h1::before{content:"Start ";}
-h1::after{content:" End";}
+input[type="text"] {
+    border: 2px solid blue;
+}
+
+a[href*="google"] {
+    color: red;
+}
+
+img[src^="image"] {
+    border: 3px solid green;
+}
+
+a[href$=".com"] {
+    background: yellow;
+}
+
+li:first-child {
+    color: red;
+}
+
+li:last-child {
+    color: blue;
+}
+
+tr:nth-child(2) {
+    color: black;
+    background: lightgray;
+}
+
+p:not(.special) {
+    color: green;
+}
+
+h1::before {
+    content: "Start ";
+}
+
+h1::after {
+    content: " End";
+}
