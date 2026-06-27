@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Country Selector</title>
+</head>
+<body>
+
+    <select onchange="s()">
+        <option>Afghanistan</option>
+        <option>India</option>
+        <option>Turkey</option>
+        <option>Germany</option>
+    </select>
+
+    <p id="r"></p>
+
+    <script>
+        function s() {
+            let v = document.querySelector("select").value;
+            document.getElementById("r").innerHTML = "You selected " + v;
+        }
+    </script>
+
+</body>
+</html>

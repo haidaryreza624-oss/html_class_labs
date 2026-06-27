@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Checker</title>
+</head>
+<body>
+
+    <label>Enter your password:</label>
+    <input type="password" onkeyup="c()">
+
+    <p id="m"></p>
+
+    <script>
+        function c() {
+            let v = document.querySelector("input").value;
+            document.getElementById("m").innerHTML = v.length < 8 ? "Weak Password" : "Strong Password";
+        }
+    </script>
+
+</body>
+</html>

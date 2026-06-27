@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <button onclick='start()'>Start Animation</button>
+    <button onclick='stopA()'>Stop Animation</button>
+
+    <div id='b' style='position:relative'>50% Discount on Pizza</div>
+
+    <script>
+        let x = 0, t;
+
+        function start() {
+            t = setInterval(function() {
+                x += 5;
+                b.style.left = x + "px";
+                b.style.color = x % 2 ? "red" : "blue";
+                b.style.fontSize = (20 + x % 10) + "px";
+            }, 100);
+        }
+
+        function stopA() {
+            clearInterval(t);
+        }
+    </script>
+
+</body>
+</html>
